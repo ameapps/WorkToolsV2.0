@@ -1,0 +1,16 @@
+<div class="edit">
+
+<div class="editpath">
+  <h6>Path of object to move</h6>
+  <input type="text" [(ngModel)]="pathToEdit">
+</div>
+
+<div class="change-to-apply">
+  <h6>Result path</h6>
+  <input type="text" [(ngModel)]="changeToApply" (keyup)="onKeyUp()">
+</div>
+
+<h6>Output json</h6>
+<textarea id="in"  [(ngModel)]="result"></textarea>
+
+</div>

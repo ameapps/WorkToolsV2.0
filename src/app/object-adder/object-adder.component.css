@@ -1,0 +1,30 @@
+div.edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.editpath, .change-to-apply, .values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3px;
+}
+
+input {
+  width: 70%;
+}
+
+#values-label {
+  width: 25%;
+}
+
+
+textarea {
+  width: 100%;
+  height: 10em;
+}
+
+#output {
+  position: relative;
+  margin-bottom: 5px;
+}

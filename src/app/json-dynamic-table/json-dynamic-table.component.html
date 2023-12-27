@@ -1,0 +1,30 @@
+
+<!-- Json array describing the table's columns -->
+<div id="json-input">
+<p>Json array describing the table's columns</p>
+
+<h6>Input here your json</h6>
+<textarea id="in" (keyup)="onKey()" [(ngModel)]="input"></textarea>
+
+</div>
+
+<!-- Dynamic table -->
+<!-- Header -->
+<p>Dynamic table</p>
+<table>
+  <tr>
+    <th id="th1" >Column</th>
+    <th id="th2">Description</th>
+  </tr>
+
+  <!-- Body -->
+  <tr *ngFor="let column of this.jsonValue">
+    <td>{{column['field']}}</td>
+    <td>
+      <span *ngIf="column['meta'] != null && column['meta']['description'] != ''">{{column['meta']['description']}}</span>
+      <span class="alert" *ngIf="column['meta'] == null || column['meta']['description'] == ''">{{noDescr}}</span>
+    </td>
+  </tr>
+  
+
+</table>

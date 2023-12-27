@@ -1,0 +1,10 @@
+<p>Please choose the functionaliy you want </p>
+<div *ngFor="let func of functions; let i = index;">
+  <input type="radio" [(ngModel)]="selFunct" [value]="i" />
+  <label (click)="onSel(i)">{{func}}</label>
+</div>
+
+
+<app-json-dynamic-table *ngIf="selFunct === 0"></app-json-dynamic-table>
+<app-json-editor *ngIf="selFunct === 1"></app-json-editor>
+<app-time-manager *ngIf="selFunct === 2"></app-time-manager>

@@ -1,0 +1,23 @@
+div.edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.editpath, .change-to-apply {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3px;
+}
+
+input {
+  width: 70%;
+}
+
+h6 {
+  background-color: red;
+}
+
+h6::after {
+  content: " (incomplete)";
+}

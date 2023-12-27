@@ -1,0 +1,42 @@
+<p>Here is possibile to edit the given JSON</p>
+
+<div id="options" *ngFor="let options of this.options; let i = index">
+  <input type="radio" [value]="i" [(ngModel)]="choosenOption" />
+  <label (click)="onSel(i)">{{ options }}</label>
+</div>
+
+<p>Json array describing the table's columns</p>
+
+<h6>Input here your json</h6>
+<textarea id="in" (keyup)="onKey()" [(ngModel)]="input"></textarea>
+
+<app-object-adder
+  [input]="input"
+  *ngIf="choosenOption === 0"
+></app-object-adder>
+<app-object-editor
+  [input]="input"
+  *ngIf="choosenOption === 1"
+></app-object-editor>
+<app-object-deleter
+  [input]="input"
+  *ngIf="choosenOption === 2"
+></app-object-deleter>
+<app-object-move [input]="input" *ngIf="choosenOption === 3"></app-object-move>
+<app-change-field-value
+  [input]="input"
+  *ngIf="choosenOption === 4"
+></app-change-field-value>
+<app-json-leaves-extractor 
+  [input]="input" 
+  *ngIf="choosenOption === 5">
+<app-json-leaves-extractor>
+  <!-- DA ERRORE 
+    Error in src/json-editor/json-editor.component.html (20:50)
+    This condition will always return 'false' since the types '5' and '6' have no overlap.
+    CAPIRE PERCHE'  
+  -->
+  <!-- <app-json-leaves-replacer 
+    [input]="input" 
+    *ngIf="choosenOption === 6">
+  </app-json-leaves-replacer> -->

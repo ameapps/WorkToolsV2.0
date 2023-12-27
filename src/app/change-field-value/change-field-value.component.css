@@ -1,0 +1,41 @@
+div.change-name, .change-to-apply {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px;
+  height: 1em;
+  padding: 5px;
+}
+
+input {
+  width: 70%;
+  height: 1em;
+}
+
+#to-change {
+  align-items: center;
+}
+
+#in {
+  width: 50%;
+}
+
+div.change-to-apply-sub {
+  display: flex;
+  justify-content: space-between;
+  width: 71%;
+}
+
+select {
+  width: 45%;
+}
+
+textarea {
+  margin-top: -1.5em;
+  width: 100%;
+}
+
+#dupplicate-values {
+  color: red;
+}
